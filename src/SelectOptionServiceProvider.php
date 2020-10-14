@@ -2,8 +2,8 @@
 
 namespace Devfaysal\SelectOption;
 
-use Illuminate\Support\ServiceProvider;
 use Devfaysal\SelectOption\Commands\SelectOptionCommand;
+use Illuminate\Support\ServiceProvider;
 
 class SelectOptionServiceProvider extends ServiceProvider
 {

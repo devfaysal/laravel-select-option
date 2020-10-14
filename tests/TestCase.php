@@ -2,9 +2,9 @@
 
 namespace Devfaysal\SelectOption\Tests;
 
+use Devfaysal\SelectOption\SelectOptionServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Devfaysal\SelectOption\SelectOptionServiceProvider;
 
 class TestCase extends Orchestra
 {
