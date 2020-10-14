@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "devfaysal/laravel-select-option",
+    "description": "Option for HTML Select",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "devfaysal",
+        "laravel-select-option"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/devfaysal/laravel-select-option",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Faysal Ahamed",
+            "email": "devfaysal@gmail.com",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
@@ -27,13 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Devfaysal\\SelectOption\\": "src",
+            "Devfaysal\\SelectOption\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Devfaysal\\SelectOption\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Devfaysal\\SelectOption\\SelectOptionServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "SelectOption": "Devfaysal\\SelectOption\\SelectOptionFacade"
             }
         }
     },

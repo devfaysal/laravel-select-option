@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Devfaysal\SelectOption\Tests;
 
 class ExampleTest extends TestCase
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Devfaysal\SelectOption\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class SelectOptionCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-select-option';
 
     public $description = 'My command';
 
