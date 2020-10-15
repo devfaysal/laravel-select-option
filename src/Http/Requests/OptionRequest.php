@@ -26,7 +26,7 @@ class OptionRequest extends FormRequest
         $rules = [
             'select' => 'required',
             'value' => 'required',
-            'display' => 'nullable'
+            'display' => 'nullable',
         ];
 
         return $rules;
@@ -39,7 +39,7 @@ class OptionRequest extends FormRequest
      */
     protected function prepareForValidation()
     {
-        if(!$this->display){
+        if (! $this->display) {
             $this->display = $this->value ?? null;
         }
     }

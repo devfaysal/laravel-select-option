@@ -14,7 +14,9 @@ use Yajra\DataTables\DataTables;
 
 class OptionController extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests;
+    use DispatchesJobs;
+    use ValidatesRequests;
 
     public function index()
     {
@@ -24,7 +26,7 @@ class OptionController extends Controller
     public function create()
     {
         return view('laravel-select-option::options.create', [
-            'selects' => SelectOption::selects()
+            'selects' => SelectOption::selects(),
         ]);
     }
 
@@ -37,8 +39,9 @@ class OptionController extends Controller
             $attributes['display']
         );
 
-        Session::flash('message', 'Option created Successfully!!'); 
+        Session::flash('message', 'Option created Successfully!!');
         Session::flash('alert-class', 'alert-success');
+
         return redirect()->route('laravelSelectOption.index');
     }
 
@@ -46,7 +49,7 @@ class OptionController extends Controller
     {
         return view('laravel-select-option::options.edit', [
             'option' => $option,
-            'selects' => SelectOption::selects()
+            'selects' => SelectOption::selects(),
         ]);
     }
 
@@ -55,8 +58,9 @@ class OptionController extends Controller
         $attributes = $request->validated();
         $option->update($attributes);
 
-        Session::flash('message', 'Option updated Successfully!!'); 
+        Session::flash('message', 'Option updated Successfully!!');
         Session::flash('alert-class', 'alert-success');
+
         return redirect()->route('laravelSelectOption.index');
     }
 
@@ -65,9 +69,10 @@ class OptionController extends Controller
         $options = Option::query();
 
         return DataTables::of($options)
-            ->addColumn('action', function($option) {
-                $actions  = '<a class="btn btn-sm btn-oval btn-info mr-1" href="'. route('laravelSelectOption.edit', $option->id) .'">Edit</a>';
+            ->addColumn('action', function ($option) {
+                $actions = '<a class="btn btn-sm btn-oval btn-info mr-1" href="'. route('laravelSelectOption.edit', $option->id) .'">Edit</a>';
                 $actions .= '<a class="btn btn-sm btn-oval btn-danger" href="'. route('laravelSelectOption.delete', $option->id) .'">Delete</a>';
+
                 return $actions;
             })
             ->rawColumns(['action'])

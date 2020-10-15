@@ -8,8 +8,9 @@ class SelectOption
 {
     public function indexView()
     {
-        return config( 'laravel-select-option.views.index');
+        return config('laravel-select-option.views.index');
     }
+
     /**
      * Get the array of Selects defined in the config.
      *
@@ -17,7 +18,7 @@ class SelectOption
      */
     public static function selects()
     {
-        return config( 'laravel-select-option.selects', [] );
+        return config('laravel-select-option.selects', []);
     }
 
     public static function createOption($select, $value, $display)
