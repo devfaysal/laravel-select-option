@@ -39,14 +39,8 @@ class OptionRequest extends FormRequest
      */
     protected function prepareForValidation()
     {
-<<<<<<< HEAD
         $this->merge([
             'display' => $this->value ?? null,
         ]);
-=======
-        if (! $this->display) {
-            $this->display = $this->value ?? null;
-        }
->>>>>>> d0b6783fb9458d401bfe1a5396dd046c88d6c3a0
     }
 }
