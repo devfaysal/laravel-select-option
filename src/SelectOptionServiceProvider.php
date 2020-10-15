@@ -9,6 +9,7 @@ class SelectOptionServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/laravel-select-option.php' => config_path('laravel-select-option.php'),
