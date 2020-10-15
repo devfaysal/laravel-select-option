@@ -26,7 +26,7 @@ class OptionRequest extends FormRequest
         $rules = [
             'select' => 'required',
             'value' => 'required',
-            'display' => 'required'
+            'display' => 'required',
         ];
 
         return $rules;
